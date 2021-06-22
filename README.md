@@ -1,3 +1,4 @@
+本分支仅将DocxToSource工具进行部分汉化工作
 # DocxToSource
 A multi-platform application that will be able to generate dotnet source code based on OpenXml based documents.  This is still a work in progress.
 
