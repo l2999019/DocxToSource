@@ -165,7 +165,7 @@ namespace DocxToSource.Wpf
         /// </summary>
         public MainWindowModel() : base()
         {
-            _currentFileDirectory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            _currentFileDirectory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory));
             _treeData = new ObservableCollection<OpenXmlTreeViewItem>();
 
             var langeDefs = new ObservableCollection<LanguageDefinition>();
@@ -525,7 +525,7 @@ namespace DocxToSource.Wpf
             // Make sure that a valid package was found before proceeding.
             if (_oPkg == null)
             {
-                throw new InvalidDataException("Selected file is not a known/valid OpenXml document");
+                throw new InvalidDataException("所选文件不是有效的OpenXml文档!");
             }
 
             // Wrap it up

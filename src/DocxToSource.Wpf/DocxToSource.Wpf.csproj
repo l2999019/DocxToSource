@@ -50,6 +50,9 @@
     <Reference Include="Prism.Wpf, Version=7.2.0.1422, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Prism.Wpf.7.2.0.1422\lib\net45\Prism.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Serialize.OpenXml.CodeGen, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serialize.OpenXml.CodeGen.0.3.2-alpha\lib\netstandard2.0\Serialize.OpenXml.CodeGen.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.CodeDom.4.7.0\lib\net461\System.CodeDom.dll</HintPath>
@@ -137,12 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Serialize.OpenXml.CodeGen\src\Serialize.OpenXml.CodeGen\Serialize.OpenXml.CodeGen.csproj">
-      <Project>{37f5caa1-efbd-4339-a3c8-a55ffe7ca873}</Project>
-      <Name>Serialize.OpenXml.CodeGen</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

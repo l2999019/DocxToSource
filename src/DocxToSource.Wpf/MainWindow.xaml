@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:DocxToSource.Wpf"
         xmlns:tree="clr-namespace:DocxToSource.Wpf.Controls"
         mc:Ignorable="d"
-        Title="Docx To Source" Height="600" Width="800"
+        Title="Docx To Source(汉化版)" Height="600" Width="800"
         WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <local:MainWindowModel/>
@@ -27,21 +27,21 @@
     <DockPanel LastChildFill="True">
 
         <Menu DockPanel.Dock="Top" Height="auto">
-            <MenuItem Header="_File">
-                <MenuItem Header="_Open" InputGestureText="Ctrl+O" Command="{Binding OpenCommand}"/>
-                <MenuItem Header="_Close" InputGestureText="Ctrl+C" Command="{Binding CloseCommand}"/>
+            <MenuItem Header="_选择文件">
+                <MenuItem Header="_打开" InputGestureText="Ctrl+O" Command="{Binding OpenCommand}"/>
+                <MenuItem Header="_关闭" InputGestureText="Ctrl+C" Command="{Binding CloseCommand}"/>
                 <Separator/>
-                <MenuItem Header="_Quit" InputGestureText="Ctrl+Q" Command="{Binding QuitCommand}"/>
+                <MenuItem Header="_退出" InputGestureText="Ctrl+Q" Command="{Binding QuitCommand}"/>
             </MenuItem>
-            <MenuItem Header="_Source Code">
-                <MenuItem Header="_Generate Source Code" IsCheckable="True" IsChecked="{Binding GenerateSourceCode}"/>
+            <MenuItem Header="_源代码选项">
+                <MenuItem Header="_生成源代码" IsCheckable="True" IsChecked="{Binding GenerateSourceCode}"/>
                 <Separator/>
-                <MenuItem Header="_Word Wrap" IsCheckable="True" IsChecked="{Binding WordWrap}"/>
-                <MenuItem Header="Syntax _Highlighting" IsCheckable="True" IsChecked="{Binding HighlightSyntax}" />
+                <MenuItem Header="_自动换行" IsCheckable="True" IsChecked="{Binding WordWrap}"/>
+                <MenuItem Header="源代码高亮" IsCheckable="True" IsChecked="{Binding HighlightSyntax}" />
             </MenuItem>
         </Menu>
         <ToolBar DockPanel.Dock="Top" Background="#FFF0F0F0" VerticalContentAlignment="Center">
-            <TextBlock Margin="5 0">Language:</TextBlock>
+            <TextBlock Margin="5 0">生成语言:</TextBlock>
             <ComboBox
                 Width="125"
                 ItemsSource="{Binding LanguageDefinitions}"
